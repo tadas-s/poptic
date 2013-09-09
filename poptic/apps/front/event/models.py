@@ -6,3 +6,7 @@ class Event(models.Model):
     name = models.CharField(
         max_length=255
     )
+
+    start = models.DateTimeField()
+
+    finish = models.DateTimeField()
