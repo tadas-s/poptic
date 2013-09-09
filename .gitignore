@@ -1,0 +1,12 @@
+*.db
+*.pyc
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+.idea
+bin
+include
+lib
+local
