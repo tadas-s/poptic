@@ -1,10 +1,8 @@
 from django.conf.urls import patterns, include, url
+from poptic.apps.front.event.views import EventListView
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
-
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Examples:
     # url(r'^$', 'poptic.views.home', name='home'),
     # url(r'^poptic/', include('poptic.foo.urls')),
@@ -14,4 +12,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^$', EventListView.as_view(), name='event-list'),
+    #url(r'^new$', contacts.views.Create1ContactView.as_view(), name='event-view')
 )
