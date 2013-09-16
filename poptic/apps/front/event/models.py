@@ -19,6 +19,9 @@ class Event(models.Model):
         "finish date and time"
     )
 
+    def __unicode__(self):
+        return self.name
+
 
 class Ticket(models.Model):
     name = models.CharField(
@@ -38,3 +41,6 @@ class Ticket(models.Model):
         Event,
         verbose_name="Event"
     )
+
+    def __unicode__(self):
+        return self.name

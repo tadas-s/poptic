@@ -1,5 +1,8 @@
 from django.conf.urls import patterns, include, url
 from poptic.apps.front.event.views import EventListView
+from django.contrib import admin
+
+admin.autodiscover()
 
 urlpatterns = patterns(
     '',
@@ -14,5 +17,6 @@ urlpatterns = patterns(
     # url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', EventListView.as_view(), name='event-list'),
+    url(r'^admin/', include(admin.site.urls)),
     #url(r'^new$', contacts.views.Create1ContactView.as_view(), name='event-view')
 )
