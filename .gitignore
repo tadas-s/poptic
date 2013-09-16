@@ -10,3 +10,5 @@ bin
 include
 lib
 local
+poptic/static/LESS_CACHE
+tmp

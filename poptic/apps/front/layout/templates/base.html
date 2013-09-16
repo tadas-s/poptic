@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load bootstrap_toolkit %}
+{% load less %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    {% bootstrap_stylesheet_tag %}
+    {% bootstrap_stylesheet_tag 'responsive' %}
+    <link rel='stylesheet' href="static/{% less 'style/base.less' %}" />
+    {% bootstrap_javascript_tag %}
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+</html>
