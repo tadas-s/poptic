@@ -1,2 +1,4 @@
 poptic
 ======
+
+Django framework playground
